@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bookModelStoreContainer" CdmEntityContainer="bookEntities">
+    <EntitySetMapping Name="tbl_book">
+      <EntityTypeMapping TypeName="bookModel.tbl_book">
+        <MappingFragment StoreEntitySet="tbl_book">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name_book" ColumnName="name_book" />
+          <ScalarProperty Name="idbook" ColumnName="idbook" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Customer">
+      <EntityTypeMapping TypeName="bookModel.tbl_Customer">
+        <MappingFragment StoreEntitySet="tbl_Customer">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="family" ColumnName="family" />
+          <ScalarProperty Name="birth_data" ColumnName="birth_data" />
+          <ScalarProperty Name="ozviat_date" ColumnName="ozviat_date" />
+          <ScalarProperty Name="Idmely" ColumnName="Idmely" />
+          <ScalarProperty Name="numerik_fhone" ColumnName="numerik_fhone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_tahvil">
+      <EntityTypeMapping TypeName="bookModel.tbl_tahvil">
+        <MappingFragment StoreEntitySet="tbl_tahvil">
+          <ScalarProperty Name="family_customer" ColumnName="family_customer" />
+          <ScalarProperty Name="name_book" ColumnName="name_book" />
+          <ScalarProperty Name="name_customer" ColumnName="name_customer" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="idbook" ColumnName="idbook" />
+          <ScalarProperty Name="idcustomer" ColumnName="idcustomer" />
+          <ScalarProperty Name="tahvil_date" ColumnName="tahvil_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

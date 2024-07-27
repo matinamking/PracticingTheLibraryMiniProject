@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="bookModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
+  <EntityType Name="tbl_book">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="name_book" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="idbook" Nullable="false" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="name" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="family" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="birth_data" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="ozviat_date" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="Idmely" Nullable="false" Type="int" />
+    <Property Name="numerik_fhone" Nullable="false" MaxLength="50" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="tbl_tahvil">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="idbook" Nullable="false" Type="int" />
+    <Property Name="idcustomer" Nullable="false" Type="int" />
+    <Property Name="tahvil_date" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="name_customer" MaxLength="50" Type="nvarchar" />
+    <Property Name="name_book" MaxLength="50" Type="nvarchar" />
+    <Property Name="family_customer" MaxLength="50" Type="nvarchar" />
+  </EntityType>
+  <EntityContainer Name="bookModelStoreContainer">
+    <EntitySet Name="tbl_book" EntityType="Self.tbl_book" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Customer" EntityType="Self.tbl_Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_tahvil" EntityType="Self.tbl_tahvil" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
